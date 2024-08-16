@@ -30,10 +30,10 @@ const Intro = () => {
         </div>
         <div className="flex flex-col gap-2">
           <p>
-            Hello! I'm Beth, a passionate software developer based in the
+            Hello! I&apos;m Beth, a passionate software developer based in the
             vibrant tech scene of Greater Manchester. With two years of hands-on
-            experience, I've honed my skills in a diverse range of technologies
-            that are crucial in modern software development.
+            experience, I&apos;ve honed my skills in a diverse range of
+            technologies that are crucial in modern software development.
           </p>
           <div>
             <p>My expertise includes:</p>
@@ -45,22 +45,22 @@ const Intro = () => {
             </ul>
           </div>
           <p>
-            I'm also well-versed in quality assurance, with experience in both
-            unit testing using Xunit and comprehensive manual testing. This
+            I&apos;m also well-versed in quality assurance, with experience in
+            both unit testing using Xunit and comprehensive manual testing. This
             ensures that the software I develop is not only functional but also
             reliable and user-friendly.
           </p>
           <p>
-            I'm always eager to take on new challenges and expand my skill set.
-            Whether it's diving into a complex problem or collaborating on
-            innovative projects, I bring enthusiasm and a keen eye for detail to
-            every task.
+            I&apos;m always eager to take on new challenges and expand my skill
+            set. Whether it&apos;s diving into a complex problem or
+            collaborating on innovative projects, I bring enthusiasm and a keen
+            eye for detail to every task.
           </p>
           <p>
-            If you're looking for a dedicated developer who can bring your ideas
-            to life or strengthen your team, I'd love to chat! Feel free to
-            reach out via email, and let's discuss how we can work together to
-            create something amazing.
+            If you&apos;re looking for a dedicated developer who can bring your
+            ideas to life or strengthen your team, I&apos;d love to chat! Feel
+            free to reach out via email, and let&apos;s discuss how we can work
+            together to create something amazing.
           </p>
         </div>
       </div>
