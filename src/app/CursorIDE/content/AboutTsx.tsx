@@ -47,7 +47,7 @@ const AboutTsx = () => {
           </p>
         </Section>
 
-        <Section title="What I'm working on">
+        <Section title="What I am working on">
           <ul className="text-cursor-text-muted text-sm space-y-2">
             <ListItem>
               Learning TypeScript & React through a range of projects
@@ -61,9 +61,9 @@ const AboutTsx = () => {
           </ul>
         </Section>
 
-        <Section title="When I'm not coding">
+        <Section title="When I am not coding">
           <p className="text-cursor-text-muted text-sm leading-relaxed">
-            I'm currently spending 2026 travelling Europe! In my spare time, I
+            I am currently spending 2026 travelling Europe! In my spare time, I
             am reading thriller books or attending Wigan Athletic matches. Up
             the Tics!
           </p>
