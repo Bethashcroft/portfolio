@@ -98,8 +98,8 @@ const skillCategories: SkillCategory[] = [
       },
       {
         name: "Git",
-        level: "comfortable",
-        icon: <SiGit className="text-orange-500" />,
+        level: "confident",
+        icon: <SiGit className="text-blue-500" />,
       },
       {
         name: "xUnit",
