@@ -6,6 +6,7 @@ interface Project {
   tech: string[];
   linkToProject?: string;
   linkToGithub: string;
+  starred?: boolean;
 }
 
 const projects: Project[] = [
@@ -22,6 +23,7 @@ const projects: Project[] = [
     tech: ["jQuery", "API", "JavaScript"],
     linkToProject: "https://bethshangman.netlify.app/",
     linkToGithub: "https://github.com/Bethashcroft/hangman",
+    starred: true,
   },
   {
     name: "Chat Bot",
@@ -29,6 +31,7 @@ const projects: Project[] = [
     tech: ["React", "TypeScript", "Gemini API", "Vite"],
     linkToProject: "https://bethsaichatbot.netlify.app/",
     linkToGithub: "https://github.com/Bethashcroft/chat-bot",
+    starred: true,
   },
   {
     name: "Joke Generator",
@@ -36,6 +39,7 @@ const projects: Project[] = [
     tech: ["React", "TypeScript", "API", "Vite"],
     linkToProject: "https://bethsjokegenerator.netlify.app/",
     linkToGithub: "https://github.com/Bethashcroft/joke-generator",
+    starred: true,
   },
   {
     name: "Absence Calculator",
@@ -70,6 +74,8 @@ const projects: Project[] = [
 ];
 
 const ProjectsTsx = () => {
+  const starProjects = projects.filter((p) => p.starred);
+  const olderProjects = projects.filter((p) => !p.starred);
   return (
     <div className="max-w-3xl mx-auto font-mono">
       <div className="flex items-center gap-2 text-cursor-text-muted text-xs mb-6">
@@ -87,8 +93,22 @@ const ProjectsTsx = () => {
         A collection of things I&apos;ve built while learning and growing as a
         developer.
       </p>
+
+      <h2 className="text-lg font-semibold text-cursor-text mb-3 flex items-center gap-2">
+        <span className="text-yellow-400">★</span>Star Projects
+      </h2>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+        {starProjects.map((project) => (
+          <ProjectCard key={project.name} project={project} />
+        ))}
+      </div>
+
+      <h2 className="text-lg font-semibold text-cursor-text mb-3 flex items-center gap-2">
+        <span className="text-cursor-text-muted">📁</span> Older Projects
+      </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {projects.map((project) => (
+        {olderProjects.map((project) => (
           <ProjectCard key={project.name} project={project} />
         ))}
       </div>
