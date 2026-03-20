@@ -53,7 +53,7 @@ const skillCategories: SkillCategory[] = [
       },
       {
         name: "CSS",
-        level: "comfortable",
+        level: "confident",
         icon: <SiCss className="text-blue-500" />,
       },
     ],

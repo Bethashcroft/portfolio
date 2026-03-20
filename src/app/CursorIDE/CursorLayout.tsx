@@ -94,14 +94,14 @@ const CursorLayout = () => {
 
   if (!isLoaded) {
     return (
-      <div className="h-screen w-screen flex items-center justify-center bg-transparent p-4">
+      <div className="h-dvh w-screen flex items-center justify-center bg-transparent p-4">
         <Starfield />
       </div>
     );
   }
 
   return (
-    <div className="h-screen w-screen flex items-center justify-center bg-transparent p-4">
+    <div className="h-dvh w-screen flex items-center justify-center bg-transparent p-4">
       <Starfield />
       <div className=" relative z-10 w-full h-full max-w-7xl max-h-[900px] flex flex-col rounded-lg overflow-hidden border border-cursor-border shadow-2xl shadow-purple-900/20">
         <TitleBar />
