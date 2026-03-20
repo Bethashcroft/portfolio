@@ -20,7 +20,7 @@ const config = {
     },
     extend: {
       fontFamily: {
-        greatVibes: ["var(--font-great-vibes)", ...fontFamily.sans],
+        mono: ["Consolas", "Monaco", "Courier New", ...fontFamily.mono],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -55,6 +55,18 @@ const config = {
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
+        },
+        cursor: {
+          bg: "var(--cursor-bg)",
+          sidebar: "var(--cursor-sidebar)",
+          active: "var(--cursor-active)",
+          border: "var(--cursor-border)",
+          text: "var(--cursor-text)",
+          "text-muted": "var(--cursor-text-muted)",
+          purple: "var(--cursor-purple)",
+          "purple-dim": "var(--cursor-purple-dim)",
+          titlebar: "var(--cursor-titlebar)",
+          statusbar: "var(--cursor-statusbar)",
         },
       },
       borderRadius: {
