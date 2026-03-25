@@ -122,9 +122,16 @@ interface ProjectCardProps {
 
 const ProjectCard = ({ project }: ProjectCardProps) => {
   return (
-    <div className="border border-cursor-border rounded-lg bg-cursor-sidebar p-4 flex flex-col justify-between gap-3 hover:border-cursor-purple/50 transition-colors">
+    <div
+      className={`border rounded-lg bg-cursor-sidebar p-4 flex flex-col justify-between gap-3 transition-colors ${
+        project.starred
+          ? "border-yellow-400/40 hover:border-yellow-400/70 shadow-[0_0_12px_rgba(250,204,21,0.15)] hover:shadow-[0_0_20px_rgba(250,204,21,0.25)]"
+          : "border-cursor-border hover:border-cursor-purple/50"
+      }`}
+    >
       <div>
         <h3 className="text-cursor-text font-semibold text-sm mb-1">
+          {project.starred && <span className="text-yellow-400 mr-1.5">★</span>}
           {project.name}
         </h3>
         <p className="text-cursor-text-muted text-xs leading-relaxed">
