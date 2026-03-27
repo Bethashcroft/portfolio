@@ -18,6 +18,15 @@ const projects: Project[] = [
     linkToGithub: "https://github.com/Bethashcroft/WebsiteProjectCN",
   },
   {
+    name: "Mental Health Check-In",
+    description:
+      "A daily mood tracker that helps you spot patterns and look after your wellbeing",
+    tech: ["React", "TypeScript", "Recharts", "Vite"],
+    linkToProject: "https://mentalhealthcheckin.netlify.app/",
+    linkToGithub: "https://github.com/Bethashcroft/mental-health-check-in",
+    starred: true,
+  },
+  {
     name: "Hangman",
     description: "The classic game built using jQuery and a dictionary API",
     tech: ["jQuery", "API", "JavaScript"],
