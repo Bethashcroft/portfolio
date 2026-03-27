@@ -23,7 +23,7 @@ const projects: Project[] = [
       "A daily mood tracker that helps you spot patterns and look after your wellbeing",
     tech: ["React", "TypeScript", "Recharts", "Vite"],
     linkToProject: "https://mentalhealthcheckin.netlify.app/",
-    linkToGithub: "https://github.com/Bethashcroft/mental-health-check-in",
+    linkToGithub: "https://github.com/Bethashcroft/mentalhealthcheckin",
     starred: true,
   },
   {
