@@ -7,7 +7,27 @@ interface Project {
   linkToProject?: string;
   linkToGithub: string;
   starred?: boolean;
+  comingSoon?: boolean;
 }
+
+const comingSoonProjects: Project[] = [
+  {
+    name: "Readers Realm",
+    description:
+      "A Goodreads-style book app—track what you read, discover titles, and manage your library, built to feel faster and more personal.",
+    tech: ["React", "TypeScript", "Vite", "C#"],
+    linkToGithub: "https://github.com/Bethashcroft/readers-realm",
+    comingSoon: true,
+  },
+  {
+    name: "SkinRoutine",
+    description:
+      "A skincare diary: log AM/PM routines, track products and ingredients, and get personalised recommendations for your skin type.",
+    tech: ["React", "TypeScript", "Vite", "Supabase"],
+    linkToGithub: "https://github.com/Bethashcroft/skinroutine-app",
+    comingSoon: true,
+  },
+];
 
 const projects: Project[] = [
   {
@@ -91,7 +111,7 @@ const ProjectsTsx = () => {
         <span className="text-cyan-400">⚛</span>
         <span>projects.tsx</span>
         <span className="text-cursor-text-muted/50">
-          - {projects.length} projects
+          - {projects.length} projects · {comingSoonProjects.length} in progress
         </span>
       </div>
 
@@ -102,6 +122,18 @@ const ProjectsTsx = () => {
         A collection of things I&apos;ve built while learning and growing as a
         developer.
       </p>
+
+      <h2 className="text-lg font-semibold text-cursor-text mb-3 flex items-center gap-2">
+        <span className="text-cyan-400">🚀</span> Coming Soon
+      </h2>
+      <p className="text-cursor-text-muted text-xs mb-4 -mt-1">
+        What I&apos;m building next — repos are open; live demos on the way.
+      </p>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+        {comingSoonProjects.map((project) => (
+          <ProjectCard key={project.name} project={project} />
+        ))}
+      </div>
 
       <h2 className="text-lg font-semibold text-cursor-text mb-3 flex items-center gap-2">
         <span className="text-yellow-400">★</span>Star Projects
@@ -133,16 +165,27 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
   return (
     <div
       className={`border rounded-lg bg-cursor-sidebar p-4 flex flex-col justify-between gap-3 transition-colors ${
-        project.starred
-          ? "border-yellow-400/40 hover:border-yellow-400/70 shadow-[0_0_12px_rgba(250,204,21,0.15)] hover:shadow-[0_0_20px_rgba(250,204,21,0.25)]"
-          : "border-cursor-border hover:border-cursor-purple/50"
+        project.comingSoon
+          ? "border-dashed border-cyan-400/40 hover:border-cyan-400/70 shadow-[0_0_12px_rgba(34,211,238,0.1)] hover:shadow-[0_0_20px_rgba(34,211,238,0.2)]"
+          : project.starred
+            ? "border-yellow-400/40 hover:border-yellow-400/70 shadow-[0_0_12px_rgba(250,204,21,0.15)] hover:shadow-[0_0_20px_rgba(250,204,21,0.25)]"
+            : "border-cursor-border hover:border-cursor-purple/50"
       }`}
     >
       <div>
-        <h3 className="text-cursor-text font-semibold text-sm mb-1">
-          {project.starred && <span className="text-yellow-400 mr-1.5">★</span>}
-          {project.name}
-        </h3>
+        <div className="flex items-start justify-between gap-2 mb-1">
+          <h3 className="text-cursor-text font-semibold text-sm">
+            {project.starred && (
+              <span className="text-yellow-400 mr-1.5">★</span>
+            )}
+            {project.name}
+          </h3>
+          {project.comingSoon && (
+            <span className="shrink-0 text-[10px] font-medium uppercase tracking-wide px-2 py-0.5 rounded-full bg-cyan-400/10 text-cyan-400 border border-cyan-400/30">
+              Coming soon
+            </span>
+          )}
+        </div>
         <p className="text-cursor-text-muted text-xs leading-relaxed">
           {project.description}
         </p>
@@ -160,7 +203,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
       </div>
 
       <div className="flex gap-2">
-        {project.linkToProject && (
+        {project.linkToProject && !project.comingSoon && (
           <a
             href={project.linkToProject}
             target="_blank"
@@ -174,7 +217,11 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
           href={project.linkToGithub}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-xs text-cursor-text-muted hover:text-cursor-text transition-colors"
+          className={`text-xs transition-colors ${
+            project.comingSoon
+              ? "text-cyan-400 hover:text-cyan-300"
+              : "text-cursor-text-muted hover:text-cursor-text"
+          }`}
         >
           GitHub →
         </a>
