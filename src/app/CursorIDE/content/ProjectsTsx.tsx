@@ -19,17 +19,18 @@ const comingSoonProjects: Project[] = [
     linkToGithub: "https://github.com/Bethashcroft/readers-realm",
     comingSoon: true,
   },
+];
+
+const projects: Project[] = [
   {
     name: "SkinRoutine",
     description:
       "A skincare diary: log AM/PM routines, track products and ingredients, and get personalised recommendations for your skin type.",
     tech: ["React", "TypeScript", "Vite", "Supabase"],
+    linkToProject: "https://skinroutinediary.netlify.app/",
     linkToGithub: "https://github.com/Bethashcroft/skinroutine-app",
-    comingSoon: true,
+    starred: true,
   },
-];
-
-const projects: Project[] = [
   {
     name: "Doggo Pals",
     description: "A detailed doggy day care business website",
