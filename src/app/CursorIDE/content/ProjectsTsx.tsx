@@ -12,11 +12,11 @@ interface Project {
 
 const comingSoonProjects: Project[] = [
   {
-    name: "Readers Realm",
+    name: "Readers Universe",
     description:
       "A Goodreads-style book app—track what you read, discover titles, and manage your library, built to feel faster and more personal.",
     tech: ["React", "TypeScript", "Vite", "C#"],
-    linkToGithub: "https://github.com/Bethashcroft/readers-realm",
+    linkToGithub: "https://github.com/Bethashcroft/readers-universe",
     comingSoon: true,
   },
 ];
